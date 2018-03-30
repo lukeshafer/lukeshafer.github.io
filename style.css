@@ -19,7 +19,7 @@ body {
     margin-left: 10px
 }
 
-sup {
+.tinytext {
     vertical-align: super;
     font-size: 2px
 }
