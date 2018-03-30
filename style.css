@@ -19,6 +19,11 @@ body {
     margin-left: 10px
 }
 
+sup {
+    vertical-align: super;
+    font-size: 2px
+}
+
 footer {
     margin-top: 20px;
     font-family: "Courier New", Courier, monospace;
