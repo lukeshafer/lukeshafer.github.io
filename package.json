@@ -1,0 +1,23 @@
+{
+  "name": "lukeshafer.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "commands.js",
+  "dependencies": {
+    "ioredis": "^3.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukeshafer/lukeshafer.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukeshafer/lukeshafer.github.io/issues"
+  },
+  "homepage": "https://github.com/lukeshafer/lukeshafer.github.io#readme"
+}
