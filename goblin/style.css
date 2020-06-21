@@ -1,0 +1,26 @@
+body {
+    background-color: lightblue;
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.heading {
+    color: navy;
+    text-align: center;
+}
+
+.courier {
+    font-family: "Courier New", Courier, monospace;
+}
+
+.tab {
+    margin-left: 10px
+}
+
+footer {
+    margin-top: 20px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 12px;
+}
