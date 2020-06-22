@@ -35,20 +35,22 @@
           <h2><center>Luke Shafer</center></h2>
           <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-blue"></i>B.S. Computer Science</p>
           <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-blue"></i>Columbus, OH</p>
-          <a href="mailto: hello@lukeshafer.com" style="text-decoration: none"><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-blue"></i>hello@lukeshafer.com</a>
+          <p><a href="mailto: hello@lukeshafer.com" style="text-decoration: none"><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-blue"></i>hello@lukeshafer.com</a></p>
           <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-blue"></i>(937) 232-7453</p>
-          <hr>
+          <p><a href="https://github.com/lukeshafer/" style="text-decoration: none"><i class="fa fa-github fa-fw w3-margin-right w3-large w3-text-blue"></i>github.com/lukeshafer</a></p>
+          <p><a href="https://www.linkedin.com/in/luke-shafer-27059493/" style="text-decoration: none"><i class="fa fa-linkedin fa-fw w3-margin-right w3-large w3-text-blue"></i>luke-shafer-27059493</a></p>
+          <hr> 
 
           <!-- Programming Languages -->
-          <p class="w3-large"><b><i class="fa fa-code fa-fw w3-margin-right w3-text-blue"></i>Languages</b></p>
+          <p class="w3-large"><b><i class="fa fa-code fa-fw w3-margin-right w3-text-blue"></i>Programming Languages</b></p>
           <div id="programming-languages">
             <script>
-              var languages = ["C++", "C#", "HTML", "CSS", "Powershell", "Python", "VB.NET", "ProvideX"];
+              var arr = ["C++", "C#", "HTML", "CSS", "Powershell", "Python", "VB.NET", "ProvideX"];
               var text = "";
               var i;
-              for (i = 0; i < languages.length; i++) {
+              for (i = 0; i < arr.length; i++) {
                 text += "<div class=\"w3-round-xlarge w3-blue inline-bubble\" style=\"padding-right:0.5em;padding-left:0.5em;margin-right:0.5em\">";
-                text += "<div class=\"w3-center w3-text-white\">" + languages[i] + "</div>";
+                text += "<div class=\"w3-center w3-text-white\">" + arr[i] + "</div>";
                 text += "</div>"
               }
               document.getElementById("programming-languages").innerHTML = text;
@@ -57,17 +59,34 @@
 
           <!-- Technical Skills -->
           <p class="w3-large w3-text-theme"><b><i class="fa fa-desktop fa-fw w3-margin-right w3-text-blue"></i>Technical Skills</b></p>
-          <p>English</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-blue" style="height:24px;width:100%"></div>
+          <div id="technical-skills">
+            <script>
+              var arr = ["SQL", "Github", "RDP", "Computer Hardware"];
+              var text = "";
+              var i;
+              for (i = 0; i < arr.length; i++) {
+                text += "<div class=\"w3-round-xlarge w3-blue inline-bubble\" style=\"padding-right:0.5em;padding-left:0.5em;margin-right:0.5em\">";
+                text += "<div class=\"w3-center w3-text-white\">" + arr[i] + "</div>";
+                text += "</div>"
+              }
+              document.getElementById("technical-skills").innerHTML = text;
+            </script>
           </div>
-          <p>Spanish</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-blue" style="height:24px;width:55%"></div>
-          </div>
-          <p>German</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-blue" style="height:24px;width:25%"></div>
+
+          <!-- Interpersonal Skills -->
+          <p class="w3-large w3-text-theme"><b><i class="fa fa-handshake-o fa-fw w3-margin-right w3-text-blue"></i>Interpersonal Skills</b></p>
+          <div id="interpersonal-skills">
+            <script>
+              var arr = ["Customer Service and Support","Team Communication","Highly Adaptable","Advanced Problem-Solving Skills","Patience"];
+              var text = "";
+              var i;
+              for (i = 0; i < arr.length; i++) {
+                text += "<div class=\"w3-round-xlarge w3-blue inline-bubble\" style=\"padding-right:0.5em;padding-left:0.5em;margin-right:0.5em\">";
+                text += "<div class=\"w3-center w3-text-white\">" + arr[i] + "</div>";
+                text += "</div>"
+              }
+              document.getElementById("interpersonal-skills").innerHTML = text;
+            </script>
           </div>
           <br>
         </div>
@@ -172,38 +191,8 @@
 </div>
 
 <footer class="w3-container w3-blue w3-center w3-margin-top">
-  <a class="fa fa-github w3-hover-opacity" href="https://github.com/lukeshafer/" style="text-decoration: none; font-size:200%">&nbsp;</a>
-  <a class="fa fa-linkedin w3-hover-opacity" href="https://www.linkedin.com/in/luke-shafer-27059493" style="text-decoration: none; font-size:200%"></a>
-</style>
+  <p>Site theme from <a href="https://www.w3schools.com/">w3schools.com</a>. Site source code available <a href="https://github.com/lukeshafer/lukeshafer.github.io">here</a>.</p>
 </footer>
-
-<script>
-  // Get the modal
-  var modal = document.getElementById("myModal");
-  
-  // Get the button that opens the modal
-  var btn = document.getElementById("myBtn");
-  
-  // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName("close")[0];
-  
-  // When the user clicks the button, open the modal 
-  btn.onclick = function() {
-    modal.style.display = "block";
-  }
-  
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function() {
-    modal.style.display = "none";
-  }
-  
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
-  </script>
 
 </body>
 </html>
