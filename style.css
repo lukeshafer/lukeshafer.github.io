@@ -43,6 +43,10 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   animation-duration: 0.4s
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Add Animation */
 @-webkit-keyframes animatetop {
   from {top:-300px; opacity:0} 
@@ -81,4 +85,32 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   padding: 2px 16px;
   background-color: #2196F3;
   color: white;
+}
+
+/* Mobile View */
+@media (max-width: 600px) { 
+  .nav-button {
+  width: 100%; /* adds full width to mydiv which is best for mobiles */
+  display: block; /* displays mydiv as a block */
+  }
+  .nav-bar {
+  display: none; /* Doesn’t display mydiv-2 at screen sizes upto 700px  */
+  }
+}
+
+/* Desktop View */
+@media (min-width: 600px) {
+  .nav-bar {
+  width: 100%; /* adds full width to mydiv which is best for mobiles */
+  display: block; /* displays mydiv as a block */
+  }
+  .nav-button {
+  display: none; /* Doesn’t display mydiv-2 at screen sizes upto 700px  */
+  }
+  .sticky {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
 }

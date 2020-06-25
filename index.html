@@ -22,19 +22,50 @@
   <link rel="apple-touch-icon" href="favicon/favicon-120.png" sizes="120x120">
   <link rel="apple-touch-icon" href="favicon/favicon-152.png" sizes="152x152">
   <link rel="apple-touch-icon" href="favicon/favicon-180.png" sizes="180x180">
+
 </head>
 
 <body class="w3-light-grey">
 
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-top w3-center" style="display:none;width: 100%;" id="mySidebar">
+    <button class="w3-button w3-xlarge w3-cyan w3-text-white" onclick="w3_close()" style="text-align: left;width:100%">☰</button>
+</div>
+
 <!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1200px;">
+<div class="w3-content w3-margin-top" style="max-width:1200px;" id="page-container">
 
   <!-- The Grid -->
   <div class="w3-row-padding">
+
+    <!-- Header NavBar -->
+    <div class="w3-col nav-header sticky">
+      <div class="w3-container w3-card w3-cyan w3-margin-bottom">
+        <div class="w3-container">
+          <button class="w3-button w3-cyan w3-xlarge nav-button" onclick="w3_open()" style="text-align: left;">☰</button>
+          <h4 id="nav" class="nav-bar w3-text-white" style="text-align: right;">
+            <script>
+              var titles = ["Professional Profile","Work Experience","Education"];
+              var ids = ["Professional_Profile","Work_Experience","Education"];
+              var bar_text = "";
+              var side_text = "";
+              var i;
+              for (i = 0; i < titles.length; i++) {
+                bar_text += "<a href=\"#" + ids[i] + "\" style=\"text-decoration: none;margin-right:1.5em;\" class=\"w3-hover-text-light-blue\">" + titles[i] + "</a>";
+                side_text += "<h4><a href=\"#" + ids[i] + "\" class=\"w3-bar-item w3-button\"onclick=\"w3_close()\"    >" + titles[i] + "</h4></a>";
+              }
+              document.getElementById("nav").innerHTML = bar_text;
+              document.getElementById("mySidebar").innerHTML += side_text;
+            </script>
+          
+          </h4>
+        </div>
+      </div>
+    </div>
+    <!-- End Header NavBar-->
   
     <!-- Left Column -->
     <div class="w3-third">
-      <div class="w3-white w3-text-grey w3-card-4">
+      <div class="w3-white w3-text-grey w3-card-4 ">
         <!-- Photo -->
         <div class="w3-display-container">
           <br>
@@ -44,23 +75,22 @@
         <div class="w3-container">
           <!-- Name and Contact -->
           <h1><center>Luke Shafer</center></h1>
-          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-blue"></i>B.S. Computer Science</p>
-          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-blue"></i>Columbus, OH</p>
-          <p><a href="mailto: hello@lukeshafer.com" style="text-decoration: none"><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-blue"></i>hello@lukeshafer.com</a></p>
-          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-blue"></i>(937) 232-7453</p>
-          <p><a href="https://github.com/lukeshafer/" style="text-decoration: none"><i class="fa fa-github fa-fw w3-margin-right w3-large w3-text-blue"></i>github.com/lukeshafer</a></p>
-          <p><a href="https://www.linkedin.com/in/luke-shafer-27059493/" style="text-decoration: none"><i class="fa fa-linkedin fa-fw w3-margin-right w3-large w3-text-blue"></i>luke-shafer-27059493</a></p>
+          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-cyan"></i>B.S. Computer Science</p>
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-cyan"></i>Columbus, OH</p>
+          <p><a href="mailto: hello@lukeshafer.com" style="text-decoration: none"><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-cyan"></i>hello@lukeshafer.com</a></p>
+          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-cyan"></i>(937) 232-7453</p>
+          <p><a href="https://github.com/lukeshafer/" style="text-decoration: none"><i class="fa fa-github fa-fw w3-margin-right w3-large w3-text-cyan"></i>github.com/lukeshafer</a></p>
+          <p><a href="https://www.linkedin.com/in/luke-shafer-27059493/" style="text-decoration: none"><i class="fa fa-linkedin fa-fw w3-margin-right w3-large w3-text-cyan"></i>luke-shafer-27059493</a></p>
           <hr> 
-
           <!-- Programming Languages -->
-          <p class="w3-large"><b><i class="fa fa-code fa-fw w3-margin-right w3-text-blue"></i>Programming Languages</b></p>
+          <p class="w3-large"><b><i class="fa fa-code fa-fw w3-margin-right w3-text-cyan"></i>Programming Languages</b></p>
           <div id="programming-languages">
             <script>
               var arr = ["C++", "C#", "HTML", "CSS", "Powershell", "Python", "VB.NET", "ProvideX"];
               var text = "";
               var i;
               for (i = 0; i < arr.length; i++) {
-                text += "<div class=\"w3-round-xlarge w3-blue inline-bubble\" style=\"padding-right:0.5em;padding-left:0.5em;margin-right:0.5em\">";
+                text += "<div class=\"w3-round-xlarge w3-cyan inline-bubble\" style=\"padding-right:0.5em;padding-left:0.5em;margin-right:0.5em\">";
                 text += "<div class=\"w3-center w3-text-white\">" + arr[i] + "</div>";
                 text += "</div>"
               }
@@ -69,14 +99,14 @@
           </div>
 
           <!-- Technical Skills -->
-          <p class="w3-large w3-text-theme"><b><i class="fa fa-desktop fa-fw w3-margin-right w3-text-blue"></i>Technical Skills</b></p>
+          <p class="w3-large w3-text-theme"><b><i class="fa fa-desktop fa-fw w3-margin-right w3-text-cyan"></i>Technical Skills</b></p>
           <div id="technical-skills">
             <script>
               var arr = ["SQL", "Github", "RDP", "Computer Hardware"];
               var text = "";
               var i;
               for (i = 0; i < arr.length; i++) {
-                text += "<div class=\"w3-round-xlarge w3-blue inline-bubble\" style=\"padding-right:0.5em;padding-left:0.5em;margin-right:0.5em\">";
+                text += "<div class=\"w3-round-xlarge w3-cyan inline-bubble\" style=\"padding-right:0.5em;padding-left:0.5em;margin-right:0.5em\">";
                 text += "<div class=\"w3-center w3-text-white\">" + arr[i] + "</div>";
                 text += "</div>"
               }
@@ -85,14 +115,14 @@
           </div>
 
           <!-- Interpersonal Skills -->
-          <p class="w3-large w3-text-theme"><b><i class="fa fa-handshake-o fa-fw w3-margin-right w3-text-blue"></i>Interpersonal Skills</b></p>
+          <p class="w3-large w3-text-theme"><b><i class="fa fa-handshake-o fa-fw w3-margin-right w3-text-cyan"></i>Interpersonal Skills</b></p>
           <div id="interpersonal-skills">
             <script>
               var arr = ["Customer Service and Support","Team Communication","Highly Adaptable","Advanced Problem-Solving Skills","Patience"];
               var text = "";
               var i;
               for (i = 0; i < arr.length; i++) {
-                text += "<div class=\"w3-round-xlarge w3-blue inline-bubble\" style=\"padding-right:0.5em;padding-left:0.5em;margin-right:0.5em\">";
+                text += "<div class=\"w3-round-xlarge w3-cyan inline-bubble\" style=\"padding-right:0.5em;padding-left:0.5em;margin-right:0.5em\">";
                 text += "<div class=\"w3-center w3-text-white\">" + arr[i] + "</div>";
                 text += "</div>"
               }
@@ -108,12 +138,12 @@
 
     <!-- Right Column -->
     <div class="w3-twothird">
-    
+
       <!-- Professional Profile -->
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa w3-margin-right w3-xxlarge w3-text-blue"></i>Professional Profile</h2>
+      <div class="w3-container w3-card w3-white w3-margin-bottom" id="Professional_Profile">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa w3-margin-right w3-xxlarge w3-text-cyan"></i>Professional Profile</h2>
         <div class="w3-container">
-          <h5 class="w3-opacity"><b>Software Developer | Customer Support Expert</b></h5>
+          <h5 class="w3-text-grey"><b>Software Developer | Customer Support Expert</b></h5>
           <p>Luke Shafer is a <b>technology specialist</b> with web development, desktop development, and customer-facing technical support 
             experience. Skilled in providing quality solutions, high adaptability, and 
             advanced troubleshooting skills.<br><br>
@@ -126,11 +156,11 @@
       <!-- End Professional Profile-->
 
       <!-- Work Experience -->
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-blue"></i>Work Experience</h2>
+      <div class="w3-container w3-card w3-white w3-margin-bottom" id="Work_Experience">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-cyan"></i>Work Experience</h2>
         <div class="w3-container">
-          <h5 class="w3-opacity"><b>English Teacher | VIPKid.com</b></h5>
-          <h6><span class="w3-text-blue"><i class="fa fa-map-marker fa-fw">&nbsp;</i>
+          <h5 class="w3-text-grey"><b>English Teacher | VIPKid.com</b></h5>
+          <h6><span class="w3-text-cyan"><i class="fa fa-map-marker fa-fw">&nbsp;</i>
             Remote  &nbsp;</span><span class="w3-text-grey"><i class="fa fa-calendar fa-fw w3-margin-left">&nbsp;</i>
             Mar 2020 - </span><span class="w3-tag w3-dark-grey w3-round">Current</span></h6>
           <li>Teach English as a second language to students in China.</li>
@@ -139,8 +169,8 @@
           <hr>
         </div>
         <div class="w3-container">
-          <h5 class="w3-opacity"><b>Technical Specialist | <i class="fa fa-apple fa-fw"></i>Apple, Inc.</b></h5>
-          <h6><span class="w3-text-blue w3-hover-text-light-blue"><a href="https://goo.gl/maps/748moFwiQ9VDxVkm9" style="text-decoration: none" target="_blank"><i class="fa fa-map-marker fa-fw">&nbsp;</i>
+          <h5 class="w3-text-grey"><b>Technical Specialist | <i class="fa fa-apple fa-fw"></i>Apple, Inc.</b></h5>
+          <h6><span class="w3-text-cyan w3-hover-text-light-blue"><a href="https://goo.gl/maps/748moFwiQ9VDxVkm9" style="text-decoration: none" target="_blank"><i class="fa fa-map-marker fa-fw">&nbsp;</i>
             Columbus, OH  &nbsp;</a></span><span class="w3-text-grey"><i class="fa fa-calendar fa-fw w3-margin-left">&nbsp;</i>
             Aug 2019 - Dec 2019</span></h6>
           <li>Provided hardware and software support for Apple customers on their mobile devices.</li>
@@ -151,8 +181,8 @@
           <hr>
         </div>
         <div class="w3-container">
-          <h5 class="w3-opacity"><b>Product Support Specialist | London Computer Systems</b></h5>
-          <h6><span class="w3-text-blue w3-hover-text-light-blue"><a href="https://goo.gl/maps/BX9jhdA7ugN4cY7n9" style="text-decoration: none" target="_blank"><i class="fa fa-map-marker fa-fw">&nbsp;</i>
+          <h5 class="w3-text-grey"><b>Product Support Specialist | London Computer Systems</b></h5>
+          <h6><span class="w3-text-cyan w3-hover-text-light-blue"><a href="https://goo.gl/maps/BX9jhdA7ugN4cY7n9" style="text-decoration: none" target="_blank"><i class="fa fa-map-marker fa-fw">&nbsp;</i>
             Cincinnati, OH  &nbsp;</a></span><span class="w3-text-grey"><i class="fa fa-calendar fa-fw w3-margin-left">&nbsp;</i>
             May 2018 - Jun 2019</span></h6>
           <li>Provided over-the-phone guidance and support for customers using Rent Manager, a property management accounting software.</li>
@@ -162,8 +192,8 @@
           <hr>
         </div>
         <div class="w3-container">
-          <h5 class="w3-opacity"><b>Desktop Developer (Co-op) | Martin & Associates</b></h5>
-          <h6><span class="w3-text-blue w3-hover-text-light-blue"><a href="https://goo.gl/maps/SFo1yk4UUbgofVTX7" style="text-decoration: none" target="_blank"><i class="fa fa-map-marker fa-fw">&nbsp;</i>
+          <h5 class="w3-text-grey"><b>Desktop Developer (Co-op) | Martin & Associates</b></h5>
+          <h6><span class="w3-text-cyan w3-hover-text-light-blue"><a href="https://goo.gl/maps/SFo1yk4UUbgofVTX7" style="text-decoration: none" target="_blank"><i class="fa fa-map-marker fa-fw">&nbsp;</i>
             Cincinnati, OH  &nbsp;</a></span><span class="w3-text-grey"><i class="fa fa-calendar fa-fw w3-margin-left">&nbsp;</i>
             Sep 2015 - Aug 2017</span></h6>
           <li>Developed software enhancements for Sage 100 ERP utilizing ProvideX language.</li>
@@ -175,14 +205,14 @@
       <!-- End Work Experience -->
 
       <!-- Education -->
-      <div class="w3-container w3-card w3-white">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-blue"></i>Education</h2>
+      <div class="w3-container w3-card w3-white" id="Education">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-cyan"></i>Education</h2>
         <div class="w3-container">
-          <h5 class="w3-opacity"><b>Bachelor of Science, Computer Science | University of Cincinnati</b></h5>
-          <h6 class="w3-text-blue"><a href="https://goo.gl/maps/vohBhRuu4aD4Fwxx8" style="text-decoration: none" target="_blank"><i class="fa fa-map-marker fa-fw">&nbsp;</i>
+          <h5 class="w3-text-grey"><b>Bachelor of Science, Computer Science | University of Cincinnati</b></h5>
+          <h6 class="w3-text-cyan"><a href="https://goo.gl/maps/vohBhRuu4aD4Fwxx8" style="text-decoration: none" target="_blank"><i class="fa fa-map-marker fa-fw">&nbsp;</i>
             Cincinnati, OH  &nbsp;</a><i class="fa fa-calendar fa-fw w3-margin-left">&nbsp;</i>2013 - 2019</h6>
           <!-- RAPP XXXIII -->
-          <li class="w3-hover-text-blue modal-btn">Peer Leader, RAPP XXXIII &nbsp;|
+          <li class="w3-hover-text-cyan modal-btn">Peer Leader, RAPP XXXIII &nbsp;|
             <span class="w3-text-grey">&nbsp;2017 - 2018</span></li>
             <!-- Modal -->
             <div class="modal">
@@ -202,7 +232,7 @@
           <!-- END RAPP XXXIII -->
 
           <!-- RAPP XXXII -->
-          <li class="w3-hover-text-blue modal-btn">Participant, RAPP XXXII &nbsp;| 
+          <li class="w3-hover-text-cyan modal-btn">Participant, RAPP XXXII &nbsp;| 
             <span class="w3-text-grey">&nbsp;2016 - 2017</span></li>
             <!-- Modal -->
             <div class="modal">
@@ -223,7 +253,7 @@
           <!-- END RAPP XXXII  -->
 
           <!-- UC SSB -->
-          <li class="w3-hover-text-blue modal-btn" class=>President and Founder, UC Super Smash Bros &nbsp;| 
+          <li class="w3-hover-text-cyan modal-btn" class=>President and Founder, UC Super Smash Bros &nbsp;| 
             <span class="w3-text-grey">&nbsp;2015 - 2016</span></li>
             <!-- Modal -->
             <div class="modal">
@@ -246,7 +276,7 @@
           <!-- END UC SSB -->
 
           <!-- ARJ -->
-          <li class="w3-hover-text-blue modal-btn">Participant, Accelerating Racial Justice &nbsp;| 
+          <li class="w3-hover-text-cyan modal-btn">Participant, Accelerating Racial Justice &nbsp;| 
             <span class="w3-text-grey">&nbsp;2014</span></li>
             <!-- Modal -->
             <div class="modal">
@@ -280,12 +310,11 @@
   
   <!-- End Page Container -->
 </div>
+  
 
-<footer class="w3-container w3-blue w3-center w3-margin-top">
+<footer class="w3-container w3-cyan w3-center w3-margin-top" id="_footer">
   <p>This site was coded by me, Luke Shafer. Site theme from <a href="https://www.w3schools.com/">w3schools.com</a>. Site source code available <a href="https://github.com/lukeshafer/lukeshafer.github.io">here</a>.</p>
 </footer>
-
-
 
 </body>
 
@@ -338,6 +367,19 @@
     }
   }
 
-  </script>
+</script>
+
+<!-- Sidebar Script -->
+<script>
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    //document.getElementById("page-container").style.display = "none";
+  }
+  
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    //document.getElementById("page-container").style.display = "block";
+  }
+</script>
 
 </html>
