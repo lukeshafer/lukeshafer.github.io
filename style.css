@@ -75,7 +75,7 @@ html {
 
 .modal-header {
   padding: 2px 16px;
-  background-color: #2196F3;
+  background-color: #00bcd4;
   color: white;
 }
 
@@ -83,34 +83,70 @@ html {
 
 .modal-footer {
   padding: 2px 16px;
-  background-color: #2196F3;
+  background-color: #00bcd4;
   color: white;
 }
 
 /* Mobile View */
 @media (max-width: 600px) { 
   .nav-button {
-  width: 100%; /* adds full width to mydiv which is best for mobiles */
-  display: block; /* displays mydiv as a block */
+    width: 100%; /* adds full width to mydiv which is best for mobiles */
+    display: block; /* displays mydiv as a block */
   }
   .nav-bar {
-  display: none; /* Doesn’t display mydiv-2 at screen sizes upto 700px  */
+    display: none; /* Doesn’t display mydiv-2 at screen sizes upto 700px  */
   }
 }
 
 /* Desktop View */
 @media (min-width: 600px) {
   .nav-bar {
-  width: 100%; /* adds full width to mydiv which is best for mobiles */
-  display: block; /* displays mydiv as a block */
+    width: 100%; /* adds full width to mydiv which is best for mobiles */
+    display: block; /* displays mydiv as a block */
   }
   .nav-button {
-  display: none; /* Doesn’t display mydiv-2 at screen sizes upto 700px  */
+    display: none; /* Doesn’t display mydiv-2 at screen sizes upto 700px  */
   }
-  .sticky {
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
-    z-index: 1;
+}
+
+.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.sidebar {
+  height:100%;
+  width:100%;
+  /*background-color:#fff;*/
+  /*position:fixed;*/
+  overflow:auto;
+}
+
+.w3-row-padding,.w3-col{
+  padding:0px
+}
+
+.section {
+  position:relative; 
+  top:-3em;
+}
+
+.hobby-bubble {
+  float:left;
+  width:33.33333%;
+  height: 7.5em;
+}
+
+@media (min-width: 600px) {
+  .hobby-bubble {
+    width:50%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .hobby-bubble {
+    width:33.33333%;
   }
 }
